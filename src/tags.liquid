@@ -1,0 +1,17 @@
+---
+title: GenericTitle
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+eleventyComputed:
+  code: "foo" #Becomes "" when it should be "foo"
+permalink: /tags/{{ tag }}/
+collection: tag
+# layout: index
+eleventyExcludeFromCollections: true
+---
+
+<h1>{{ tag }}</h1>
+
+code={{ code | json }}
